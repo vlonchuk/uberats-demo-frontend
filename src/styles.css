@@ -1,3 +1,10 @@
+:root {
+    --uber-color: #327430;
+    --uber-border: 1px solid #E0E0E0; 
+    --uber-hover-color:#F7F7F7;
+    --uber-grey-text: #626262;
+}
+
 body {
     font-family: Roboto;
 }
@@ -16,8 +23,12 @@ body {
 }
 
 .cafe-col {
+    margin-bottom: 0.5em;
+}
+
+.cafe-food-main {
     display: flex;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
     justify-content: space-between;
 }
 
@@ -32,27 +43,74 @@ body {
 
 .cafe-food-desc2 {
     text-align: left;
-    color:#626262;
+    color: var(--uber-grey-text);
 }
 
 .cafe-food-desc3 {
     margin-top: auto;
     align-self: flex-start;
+    font-weight: bold;
 }
 
+.width-streched {
+    width: 100%;
+}
+  
 .cafe-food-div-img {
     border:1px solid black;
-    width:15em;
-    height:15em;
+    width: 102px;
+    height: 102px;
     overflow: hidden;
 }
 
-.cafe-food-img {
-    width:15em;
+@media only screen and (min-width: 578px) {
+    .cafe-col {
+        margin-bottom: 1em;
+    }
+
+    .cafe-food-main {
+        display: flex;
+        margin-bottom: 1em;
+        justify-content: space-between;
+    }
+    
+    .cafe-food-div-img {
+        border:1px solid black;
+        width:200px;
+        height:160px;
+        overflow: hidden;
+    }        
 }
 
+@media only screen and (min-width: 1200px) {
+    .cafe-col {
+        margin-bottom: 1.5em;
+    }
+
+    .cafe-food-main {
+        display: flex;
+        margin-bottom: 1.5em;
+        justify-content: space-between;
+    }
+
+    .cafe-food-div-img {
+        border:1px solid black;
+        width:160px;
+        height:160px;
+        overflow: hidden;
+    }        
+}
+
+.cafe-col:hover {
+    background-color:var(--uber-hover-color);
+}
+
+.cafe-food-main:hover {
+    background-color:var(--uber-hover-color);
+}
+  
 .cafe-a-selected {
-    color:#327430;    
+    color: var(--uber-color);    
 }
 
 .cafe-desc-div {
@@ -87,7 +145,7 @@ body {
 
 .cafe-desc-box-text2 {
     font-size:14px;
-    color:#626262;
+    color: var(--uber-grey-text);
 }
 
 .cafe-desc-box-ellipse {
@@ -135,7 +193,7 @@ body {
 }
 
 .search {
-    border-bottom: 1px solid #E0E0E0; 
+    border-bottom: var(--uber-border); 
     padding-top: 1em;
 }
 
@@ -164,18 +222,18 @@ body {
 
 .p-loc {
     text-align: left; 
-    color:#626262    
+    color:var(--uber-grey-text);
 }
 
 .loc-div {
-    border: 1px solid #E0E0E0; 
+    border: var(--uber-border); 
     text-align: center    
 }
 
 .loc-div-img {
     display: flex; 
     width: 70%;
-    border: 1px solid #E0E0E0;    
+    border: var(--uber-border);    
 }
 
 .loc-input {
@@ -227,7 +285,7 @@ body {
 }
 
 .footer-border {
-    border-bottom: 1px solid #E0E0E0;    
+    border-bottom: var(--uber-border);    
 }
 
 .lang-option {
@@ -276,12 +334,15 @@ body {
     padding-bottom: 5px;
 }
 
+@custom-media --big-viewport only screen and (min-width: 768px);
+@custom-media --small-viewport only screen and (max-width: 767px);
+
 .location {
     display: none;
     width: 30%;
 }
 
-@media only screen and (min-width: 768px) {
+@media (--big-viewport) {
     .location {
         display: flex;
     }    
@@ -291,7 +352,7 @@ body {
     display: none;
 }
 
-@media only screen and (max-width: 767px) {
+@media (--small-viewport) {
     .location2 {
         display: block;
     }    
@@ -304,7 +365,7 @@ body {
     justify-content:space-between;
 }
 
-@media only screen and (max-width: 767px) {
+@media (--small-viewport) {
     .cafe-rect {
         display:flex;
         text-align: center;
@@ -316,7 +377,7 @@ body {
     }    
 }
 
-@media only screen and (max-width: 767px) {
+@media (--small-viewport) {
     .cafe_nav {
         display: none;
     }
@@ -327,7 +388,7 @@ body {
     font-size: 22pt;    
 }
 
-@media only screen and (max-width: 767px) {
+@media (--small-viewport) {
     .food-type {
         text-align: center;
     }        
@@ -341,14 +402,14 @@ body {
     display: none;
 }
 
-@media only screen and (max-width: 767px) {
+@media (--small-viewport) {
     .xs-view {
         display:block
     }        
 
     .xs-view-border {
         display: block;
-        color:#626262;
+        color:var(--uber-grey-text);
     }        
 }
 
@@ -364,7 +425,7 @@ body {
     height: 80px;
 }
 
-@media only screen and (max-width: 767px) {
+@media (--small-viewport) {
     .btn-up-view {
         width: 64px;
         height: 64px;

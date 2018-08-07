@@ -2,10 +2,10 @@
 <html>
     <head>
         <title>UBER EATS</title>
-        <link rel="stylesheet" href="./normalize.css"/>
-        <link rel="stylesheet" href="./uber.css"/>
+        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css"/>
         <link rel="stylesheet" href="https://unpkg.com/flexboxgrid2@7.1.0/flexboxgrid2.css"/>
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">        
+        <link rel="stylesheet" href="./styles.css"/>		
     </head>
     <body>
         <header id="top">
@@ -27,7 +27,7 @@
                 </div>                                
             </div>    
             <div class="cafe-desc-div">
-                <img class="cafe-desc-div-img" src="./images/m1.png">
+                <img class="cafe-desc-div-img" src="./images/m1.jpg">
                 <div class="cafe-desc-box">
                     <p class="cafe-desc-box-text">Трактир «Пушкин»</p>
                     <div class="cafe-rect">
@@ -48,73 +48,24 @@
             <div class="container">
                 <p class="food-type">Закуски<br class="xs-view"/><u class="xs-view-border">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u></p>
                 <div class="row">
-                    <div class="col-xl-6 col-md-12 col-xs-12 cafe-col">
+                    {{#cafe-food}}
+                    <div class="col-xl-6 col-md-9 col-xs-12 cafe-food-main">
                         <div class="cafe-food-col">
                             <div>
-                                <p class="cafe-food-desc">Сельдь на бородинском хлебе</p>
-                                <p class="cafe-food-desc2">С яйцом и огурцом</p>
+                                <p class="cafe-food-desc">{{cafe-food-desc}}</p>
+                                <p class="cafe-food-desc2">{{cafe-food-desc2}}</p>
                             </div>
-                            <p class="cafe-food-desc3">240 ₽</p>
+                            <p class="cafe-food-desc3">{{cafe-food-price}} ₽</p>
                         </div>
                         <div class="cafe-food-div-img">
-                            <img class="cafe-food-img" src="./images/f1.png">
+						    <picture>
+                                <source class="" srcset="https://res.cloudinary.com/ddnpehgne/image/upload/v1533544827/UberEats/{{cafe-food-img-name}}-xs.png" media="(max-width: 577px)">
+                                <source class="" srcset="https://res.cloudinary.com/ddnpehgne/image/upload/v1533544827/UberEats/{{cafe-food-img-name}}-md.png" media="(max-width: 1199px)">  
+                                <img class="cafe-food-img" src="https://res.cloudinary.com/ddnpehgne/image/upload/v1533544827/UberEats/{{cafe-food-img-name}}.png">
+							</picture>                            
                         </div>
-                    </div>
-                    <div class="col-xl-6 col-md-12 col-xs-12 cafe-col">
-                        <div class="cafe-food-col">
-                            <div>
-                                <p class="cafe-food-desc">Соленья ассорти</p>
-                            </div>
-                            <p class="cafe-food-desc3">320 ₽</p>
-                        </div>                        
-                        <div class="cafe-food-div-img">
-                            <img class="cafe-food-img" src="./images/f2.png">
-                        </div>
-                    </div>                    
-                    <div class="col-xl-6 col-md-12 col-xs-12 cafe-col">
-                        <div class="cafe-food-col">
-                            <div>
-                                <p class="cafe-food-desc">Грибы маринованные</p>
-                            </div>
-                            <p class="cafe-food-desc3">300 ₽</p>
-                        </div>
-                        <div class="cafe-food-div-img">
-                            <img class="cafe-food-img" src="./images/f3.png">
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-md-12 col-xs-12 cafe-col">
-                        <div class="cafe-food-col">
-                            <div>
-                                <p class="cafe-food-desc">Сало домашнее с горчицей</p>
-                            </div>
-                            <p class="cafe-food-desc3">320 ₽</p>
-                        </div>                        
-                        <div class="cafe-food-div-img">
-                            <img class="cafe-food-img" src="./images/f4.png">
-                        </div>
-                    </div>   
-                    <div class="col-xl-6 col-md-12 col-xs-12 cafe-col">
-                        <div class="cafe-food-col">
-                            <div>
-                                <p class="cafe-food-desc">Малосольная семга</p>
-                            </div>
-                            <p class="cafe-food-desc3">390 ₽</p>
-                        </div>
-                        <div class="cafe-food-div-img">
-                            <img class="cafe-food-img" src="./images/f5.png">
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-md-12 col-xs-12 cafe-col">
-                        <div class="cafe-food-col">
-                            <div>
-                                <p class="cafe-food-desc">Язык говяжий с хреном</p>
-                            </div>
-                            <p class="cafe-food-desc3">350 ₽</p>
-                        </div>                        
-                        <div class="cafe-food-div-img">
-                            <img class="cafe-food-img" src="./images/f6.png">
-                        </div>
-                    </div>   
+                    </div> 
+                    {{/cafe-food}}
                 </div>
             </div>
         </section>

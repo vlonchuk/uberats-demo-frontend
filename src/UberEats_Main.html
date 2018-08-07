@@ -2,10 +2,10 @@
 <html>
     <head>
         <title>UBER EATS</title>
-        <link rel="stylesheet" href="./normalize.css"/>
-        <link rel="stylesheet" href="./uber.css"/>
+        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css"/>
         <link rel="stylesheet" href="https://unpkg.com/flexboxgrid2@7.1.0/flexboxgrid2.css"/>
-        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">        
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+        <link rel="stylesheet" href="./styles.css"/>
     </head>
     <body>
         <header id="top">
@@ -57,97 +57,19 @@
                     <h1>Moscow Restaurants</h1>
                 </div>
                 <div class="row">
-                    <div class="col-xl-4 col-md-6 col-xs-12">
+                    {{#cafes}}
+                    <div class="col-xl-4 col-md-6 col-xs-12 cafe-col">
                         <a class="cafe-link" href="./UberEats_Cafe.html">
-                        <img class="cafe-img" src="./images/img-xl-1.png">
+                        <img class="cafe-img" src="https://res.cloudinary.com/ddnpehgne/image/upload/v1533544827/UberEats/{{cafe-image}}">
                         <div class="cafe-desc">
-                            <p class="p-gen p-cafe-name">Макдоналдс — Газетный</p>
-                            <p class="p-gen p-food-name">₽₽ • Бургеры</p>
-                            <p class="p-gen p-arrive-time">25 - 35 Min</p>
-                        </div>                        
+                            <p class="p-gen p-cafe-name">{{cafe-name}}</p>
+                            <p class="p-gen p-food-name">{{cafe-food-name}}</p>
+                            <p class="p-gen p-arrive-time">{{cafe-arrive-time}} Min</p>
+                        </div>
                         </a>
                     </div>
-                    <div class="col-xl-4 col-md-6 col-xs-12">
-                        <a class="cafe-link" href="./UberEats_Cafe.html">
-                        <img class="cafe-img" src="./images/img-xl-2.png">
-                        <div class="cafe-desc">
-                            <p class="p-gen p-cafe-name">DimSum & Co — ЦДМ</p>
-                            <p class="p-gen p-food-name">₽ • Японская • Китайская • Азиатская</p>
-                            <p class="p-gen p-arrive-time">40 - 50 Min</p>
-                        </div>                         
-                        </a>                       
-                    </div>
-                    <div class="col-xl-4 col-md-6 col-xs-12">
-                        <a class="cafe-link" href="./UberEats_Cafe.html">
-                        <img class="cafe-img" src="./images/img-xl-3.png">
-                        <div class="cafe-desc">
-                            <p class="p-gen p-cafe-name">ДвижОК — Манежная</p>
-                            <p class="p-gen p-food-name">₽ • Американская • Европейская</p>
-                            <p class="p-gen p-arrive-time">35 - 45 Min</p>
-                        </div>                                                
-                        </a>
-                    </div>
-                    <div class="col-xl-4 col-md-6 col-xs-12">
-                        <a class="cafe-link" href="./UberEats_Cafe.html">                        
-                        <img class="cafe-img" src="./images/img-xl-4.png">
-                        <div class="cafe-desc">
-                            <p class="p-gen p-cafe-name">НЯ — NHA</p>
-                            <p class="p-gen p-food-name">₽₽ • Вьетнамская</p>
-                            <p class="p-gen p-arrive-time">30 - 40 Min</p>
-                        </div>                                           
-                        </a>     
-                    </div>
-                    <div class="col-xl-4 col-md-6 col-xs-12">
-                        <a class="cafe-link" href="./UberEats_Cafe.html">                        
-                        <img class="cafe-img" src="./images/img-xl-5.png">
-                        <div class="cafe-desc">
-                            <p class="p-gen p-cafe-name">Точка Дзы — Цветной</p>
-                            <p class="p-gen p-food-name">₽₽ • Вьетнамская</p>
-                            <p class="p-gen p-arrive-time">40 - 50 Min</p>
-                        </div>                                           
-                        </a>     
-                    </div>
-                    <div class="col-xl-4 col-md-6 col-xs-12">
-                        <a class="cafe-link" href="./UberEats_Cafe.html">                        
-                        <img class="cafe-img" src="./images/img-xl-6.png">
-                        <div class="cafe-desc">
-                            <p class="p-gen p-cafe-name">Cinnabon</p>
-                            <p class="p-gen p-food-name">₽ • Выпечка • Десерты • Капкейки</p>
-                            <p class="p-gen p-arrive-time">25 - 35 Min</p>
-                        </div>                                           
-                        </a>     
-                    </div>
-                    <div class="col-xl-4 col-md-6 col-xs-12">
-                        <a class="cafe-link" href="./UberEats_Cafe.html">                        
-                        <img class="cafe-img" src="./images/img-xl-7.png">
-                        <div class="cafe-desc">
-                            <p class="p-gen p-cafe-name">PIZZELOVE</p>
-                            <p class="p-gen p-food-name">₽₽ • Пицца</p>
-                            <p class="p-gen p-arrive-time">15 - 25 Min</p>
-                        </div>                                                
-                        </a>
-                    </div>
-                    <div class="col-xl-4 col-md-6 col-xs-12">
-                        <a class="cafe-link" href="./UberEats_Cafe.html">                        
-                        <img class="cafe-img" src="./images/img-xl-8.png">
-                        <div class="cafe-desc">
-                            <p class="p-gen p-cafe-name">Zю кафе — Тверская</p>
-                            <p class="p-gen p-food-name">₽₽ • Японская</p>
-                            <p class="p-gen p-arrive-time">25 - 35 Min</p>
-                        </div>                                                
-                        </a>
-                    </div>
-                    <div class="col-xl-4 col-md-6 col-xs-12">
-                        <a class="cafe-link" href="./UberEats_Cafe.html">                        
-                        <img class="cafe-img" src="./images/img-xl-9.png">
-                        <div class="cafe-desc">
-                            <p class="p-gen p-cafe-name">Bar BQ Cafe — Манежная</p>
-                            <p class="p-gen p-food-name">₽₽₽ • Европейская</p>
-                            <p class="p-gen p-arrive-time">30 - 40 Min</p>
-                        </div>                                           
-                        </a>     
-                    </div>
-                </div>
+                    {{/cafes}}
+                </div                
             </div>
         </section>
         <footer class="uber-footer"> 
