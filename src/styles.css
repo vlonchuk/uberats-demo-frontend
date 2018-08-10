@@ -433,7 +433,7 @@ body {
 }
 
 .lang-select {
-    width: 18em;
+    width: 70%;
     margin-top: 2em;
     height: 3em;    
     -webkit-appearance: button;

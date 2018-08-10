@@ -131,6 +131,13 @@ gulp.task('styles', function () {
         .pipe(gulp.dest(out));
 });
 
+gulp.task('html-index', function() {
+    var out = folder.build;
+    return gulp.src(folder.src + 'index.html')
+        .pipe(minifyhtml({collapseWhitespace: true}))
+        .pipe(gulp.dest(out));
+});
+
 gulp.task('html-cafe', function() {
     var out = folder.build;
     return gulp.src(folder.src + 'UberEats_Cafe.html')
@@ -147,5 +154,5 @@ gulp.task('html-main', function() {
         .pipe(gulp.dest(out));
 });
 
-gulp.task("html", ["html-main", "html-cafe"]);
+gulp.task("html", ["html-main", "html-cafe", "html-index"]);
 gulp.task("build", ["images", "styles", "html"]);
